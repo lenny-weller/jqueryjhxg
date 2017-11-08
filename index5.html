@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery.js"></script>
+</head>
+<style>
+    .down{
+        width:100px;
+        height:20px;
+        border: 1px solid #000;
+    }
+    .up{
+        background: #000;
+    }
+    .inner{
+        width:102px;
+        height:100px;
+        background: #00afff;
+    }
+</style>
+<body>
+<div class="down"></div>
+<div class="inner"></div>
+</body>
+</html>
+<script>
+    $(function(){
+        $('.down').click(function(){
+            $('.inner').slideToggle();
+            $(this).toggleClass('up');
+            return false
+        })
+    })
+</script>
